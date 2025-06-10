@@ -30,12 +30,6 @@ public class SistemaReproducao {
             System.out.println("Formato não suportado.");
         }
 
-        /*
-        PlugueDoisPinos plugue = new PlugueDoisPinos();
-        TomadaTresPinos tomada = new AdaptadorTomada(plugue);
-
-        tomada.conectaTresPinos();
-         */
     }
 
 }
