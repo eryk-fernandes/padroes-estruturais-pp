@@ -1,9 +1,10 @@
 package org.example.bridge;
 
-public class NotaFiscalEmail {
+public class EmissorEmail implements Emissor {
 
-    public void emitir(String cliente, double valor){
-        System.out.println("Emitindo nota fiscal para " + cliente + ", valor: R$" + valor);
+    @Override
+    public void emitir() {
         System.out.println("Enviando por EMAIL...");
     }
+
 }

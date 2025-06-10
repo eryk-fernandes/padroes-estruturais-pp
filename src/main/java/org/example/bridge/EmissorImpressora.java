@@ -1,9 +1,9 @@
 package org.example.bridge;
 
-public class NotaFiscalImpressora {
+public class EmissorImpressora implements Emissor {
 
-    public void emitir(String cliente, double valor){
-        System.out.println("Emitindo nota fiscal para " + cliente + ", valor: R$" + valor);
+    @Override
+    public void emitir() {
         System.out.println("Imprimindo localmente...");
     }
 }
