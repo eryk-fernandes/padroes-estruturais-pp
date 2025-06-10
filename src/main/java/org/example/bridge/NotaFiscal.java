@@ -41,8 +41,4 @@ public class NotaFiscal {
         this.valor = valor;
     }
 
-    @Override
-    public void gerar() {
-
-    }
 }
