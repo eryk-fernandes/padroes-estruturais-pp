@@ -1,14 +1,6 @@
 package org.example.composite;
 
-public class Arquivo {
+public interface Arquivo {
 
-    private String nome;
-
-    public Arquivo(String nome) {
-        this.nome = nome;
-    }
-
-    public void abrir(){
-        System.out.println("Abrindo arquivo: " + nome);
-    }
+    void abrir();
 }

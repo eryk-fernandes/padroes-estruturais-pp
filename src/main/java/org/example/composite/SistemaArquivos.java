@@ -3,8 +3,8 @@ package org.example.composite;
 public class SistemaArquivos {
 
     public static void main(String[] args) {
-        Arquivo foto = new Arquivo("foto.jpg");
-        Arquivo texto = new Arquivo("documento.txt");
+        Arquivo foto = new ArquivoPng("foto");
+        Arquivo texto = new ArquivoTxt("documento");
         
         Pasta imagens = new Pasta("Imagens");
         imagens.adicionaItem(foto);
@@ -15,8 +15,7 @@ public class SistemaArquivos {
         Pasta raiz = new Pasta("Meu Computador");
         raiz.adicionaItem(imagens);
         raiz.adicionaItem(documentos);
-
-        raiz.listaConteudo();
+        raiz.abrir();
 
     }
 }

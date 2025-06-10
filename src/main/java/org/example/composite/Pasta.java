@@ -4,27 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Pasta {
+public class Pasta implements Arquivo {
 
     private String nome;
-    private List<Object> itens = new ArrayList<>();
+    private List<Arquivo> itens = new ArrayList<>();
 
     public Pasta(String nome) {
         this.nome = nome;
     }
 
-    public void adicionaItem(Object item){
+    public void adicionaItem(Arquivo item){
         itens.add(item);
     }
 
-    public void listaConteudo(){
+    public void abrir(){
         System.out.println("Pasta: " + nome);
-        for (Object item: itens){
-            if(item instanceof Arquivo){
-                ((Arquivo) item).abrir();
-            } else if (item instanceof Pasta) {
-                ((Pasta) item).listaConteudo();
-            }
+        for (Arquivo item : itens){
+            item.abrir();
         }
     }
+
 }
