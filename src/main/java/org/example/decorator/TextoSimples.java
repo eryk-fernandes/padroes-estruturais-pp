@@ -1,14 +1,13 @@
 package org.example.decorator;
 
-public class TextoSimples {
+public class TextoSimples implements Texto {
 
-    private String conteudo;
+    public TextoSimples() {
 
-    public TextoSimples(String conteudo) {
-        this.conteudo = conteudo;
     }
 
-    public String formata() {
+    @Override
+    public String formatar(String conteudo) {
         return conteudo;
     }
 }

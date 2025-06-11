@@ -4,16 +4,19 @@ public class EditorDeTexto {
 
     public static void main(String[] args) {
 
-        String conteudo = "Padrões de projeto.";
-        TextoSimples texto = new TextoSimples(conteudo);
+        String conteudo = "Padrões de projeto";
 
-        System.out.println(texto.formata());
+        Texto texto = new TextoSimples();
+        System.out.println(texto.formatar(conteudo));
 
-        TextoNegrito textoNegrito = new TextoNegrito(conteudo);
-        System.out.println(conteudo);
+        Texto textoNegrito = new TextoNegrito(new TextoSimples());
+        System.out.println(textoNegrito.formatar(conteudo));
 
-        TextoItalico textoItalico = new TextoItalico(conteudo);
-        System.out.println(textoItalico.formata());
+        Texto textoItalico = new TextoItalico(new TextoSimples());
+        System.out.println(textoItalico.formatar(conteudo));
+
+        Texto textoSublinhado = new TextoSublinhado(new TextoSimples());
+        System.out.println(textoSublinhado.formatar(conteudo));
 
     }
 }

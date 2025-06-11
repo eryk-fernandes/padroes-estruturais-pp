@@ -1,11 +1,14 @@
 package org.example.decorator;
 
-public class TextoSublinhado extends TextoSimples {
-    public TextoSublinhado(String conteudo) {
-        super(conteudo);
+public class TextoSublinhado extends TextoDecorador {
+
+    public TextoSublinhado(Texto texto) {
+        super(texto);
     }
 
     @Override
-    public String formata() {
-        return "<u>" + super.formata() + "</u>";    }
+    public String formatar(String conteudo) {
+        return "<u>" + super.formatar(conteudo) + "</u>";
+    }
+
 }

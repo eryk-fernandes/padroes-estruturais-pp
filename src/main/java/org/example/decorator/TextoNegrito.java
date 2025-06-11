@@ -1,11 +1,13 @@
 package org.example.decorator;
 
-public class TextoNegrito extends TextoSimples {
-    public TextoNegrito(String conteudo) {
-        super(conteudo);
+public class TextoNegrito extends TextoDecorador {
+
+    public TextoNegrito(Texto texto) {
+        super(texto);
     }
 
     @Override
-    public String formata() {
-        return "<b>" + super.formata() + "</b>";    }
+    public String formatar(String conteudo) {
+        return "<b>" + super.formatar(conteudo) + "</b>";
+    }
 }
